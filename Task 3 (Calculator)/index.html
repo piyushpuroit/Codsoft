@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar-mainlogo">
+            <a href="#">
+                <img  class="navbar-n" src="https://img.freepik.com/free-vector/calculator-floating-cartoon-vector-icon-illustration-finance-business-icon-concept-isolated-flat_138676-9297.jpg" width="90px" alt="logo">   
+            </a>
+        </div>
+        <div class="navbar-mainhead">
+            <h1><center>
+                CODSOFT INTERNSHIP PROJECT
+            </center></h1>
+        </div>
+        <div class="navbar-mainsocials">              
+            <a href="https://www.linkedin.com/in/piyush-purohit-qs5474/?trk=public-profile-join-page">  
+                <img class="navbar-n" src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-square1-512.png" alt="linkedin">
+            </a>
+            <a href="https://www.instagram.com">  
+                <img class="navbar-n" src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-square2-512.png" alt="ig">
+            </a>
+            <a href="https://twitter.com">
+                <img class="navbar-n" src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-twitter-square2-512.png" alt="twitter">
+            </a>
+            <a href="https://www.reddit.com">
+                <img class="navbar-n" src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square1-512.png" alt="reddit">
+            </a>
+        </div>
+    </nav>
+    <center><h1><b>Task 3: Calculator </b></h1></center>
+    <div class="cc">
+    <form action="">
+        <div class="display">
+            <input type="text" name="text" id="out" readonly>
+        </div>
+        <div class="act">
+            <div id="emp"></div>
+            <input type="button" id="sum" onclick="add('+')" value="+">
+            <input type="button" id="num7" onclick="add(7)" value="7">
+            <input type="button" id="num8" onclick="add(8)" value="8">
+            <input type="button" id="num9" onclick="add(9)" value="9">
+            <input type="button" id="num4" onclick="add(4)" value="4">
+            <input type="button" id="num5" onclick="add(5)" value="5">
+            <input type="button" id="num6" onclick="add(6)" value="6">
+            <input type="button" id="num1" onclick="add(1)" value="1">
+            <input type="button" id="num2" onclick="add(2)" value="2">
+            <input type="button" id="num3" onclick="add(3)" value="3">
+            <input type="button" id="div" onclick="add('/')" value="/">
+            <input type="button" id="mul" onclick="add('*')" value="x">
+            <input type="button" id="sub" onclick="add('-')" value="-">
+            <input type="button" id="equal" onclick="cal()" value="=">
+            <input type="button" id="num0" onclick="add(0)" value="0">
+            <input type="button" id="dec" onclick="add('.')" value=".">
+            <input type="reset"  id="clear" value="C">
+        </div>
+    </form>
+    </div>
+    
+</body>
+<script>
+    function add(x){
+        document.getElementById("out").value += x; 
+    }
+    function cal(){
+        var output = document.getElementById("out").value;
+        var result = eval(output);
+        document.getElementById("out").value = result;
+        document.getElementById("out").value = result;
+    }
+</script>
+</html>
